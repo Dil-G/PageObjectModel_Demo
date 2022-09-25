@@ -56,7 +56,12 @@ public class UsersPageTest extends TestBase{
         Assert.assertTrue(flag,"Cannot add User");
 
     }
+    @Test(priority = 5)
+    public void tasksePageLogoutButtonTest() {
 
+        usersPage.logout();
+
+    }
     @AfterMethod
     public void tearDown() {
 

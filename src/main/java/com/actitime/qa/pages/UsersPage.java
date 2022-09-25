@@ -30,6 +30,10 @@ public class UsersPage extends TestBase  {
     @FindBy(xpath = "//div[@class='userNameContent clickable']")
     WebElement userRow;
 
+    @FindBy(xpath = "//a[@id='logoutLink']")
+    WebElement logoutButton;
+
+
     public UsersPage() {
         PageFactory.initElements(driver, this);
     }
@@ -64,5 +68,13 @@ public class UsersPage extends TestBase  {
         }else {
             return false;
         }
+    }
+
+    public LoginPage logout() {
+
+
+        logoutButton.click();
+        return new LoginPage();
+
     }
 }
